@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+
+.photo-container{
+    width: 80vw;
+    height: 400px;
+    margin: 300px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo-left, .photo-right{
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    background-size: 80vw 400px;
+    pointer-events: none;
+}
+
+.photo-left {
+    left: 0; 
+    background-image: url(./day.jpg);
+    background-position: left bottom;
+}
+
+.photo-right{
+    right: 0;
+    background-image: url(./night.jpg);
+    background-position: right bottom;
+}
+
+.slider{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    z-index: 0;
+    cursor: col-resize;
+    appearance: none;
+    background: transparent;
+    outline: none;
+    position: absolute;
+}
+
+
+.slider::after{
+content: "*";
+}
+
+
+img {
+    height: 100%;
+    width: 100%;
+}
